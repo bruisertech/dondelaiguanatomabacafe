@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donde la Iguana Tomaba Café | Gastrobar & Coworking</title>
+    <meta name="description" content="Gastrobar y Coworking LGBTQ+ friendly en Cali con enfoque en el empoderamiento femenino.">
+
+    <!-- Google Fonts: Playfair Display for headings (sophisticated) and Lato for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'iguana-pink': {
+                            50: '#fdf2f8',
+                            100: '#fce7f3',
+                            200: '#fbcfe8',
+                            300: '#f9a8d4',
+                            400: '#f472b6',
+                            500: '#ec4899',
+                            600: '#db2777', // Brand primary pink
+                            700: '#be185d',
+                            800: '#9d174d',
+                            900: '#831843',
+                        },
+                        'iguana-gold': '#d4af37', // A touch of gold for sophistication
+                    },
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Custom Styles and Animations */
+        body {
+            background-color: #fff0f5; /* Very light pink background */
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Subtle Orchid Background Animations */
+        .orchid-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .orchid {
+            position: absolute;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%23f9a8d4" opacity="0.3" d="M304 32c-35.3 0-64 28.7-64 64V212.7L181.3 154c-25-25-65.5-25-90.5 0s-25 65.5 0 90.5L149.5 304H48c-35.3 0-64 28.7-64 64s28.7 64 64 64H171.3L112 490.7c-25 25-25 65.5 0 90.5s65.5 25 90.5 0L261.3 522h41.4l58.7 58.7c25 25 65.5 25 90.5 0s25-65.5 0-90.5L392.7 432H512c35.3 0 64-28.7 64-64s-28.7-64-64-64H396.7l58.7-58.7c25-25 25-65.5 0-90.5s-65.5-25-90.5 0L306.3 212.7V96c0-35.3-28.7-64-64-64z"/></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg) scale(0.8); opacity: 0; }
+            10% { opacity: 0.4; }
+            90% { opacity: 0.4; }
+            100% { transform: translateY(-20vh) rotate(360deg) scale(1.2); opacity: 0; }
+        }
+
+        .orchid:nth-child(1) { left: 10%; width: 40px; height: 40px; animation-delay: 0s; }
+        .orchid:nth-child(2) { left: 80%; width: 60px; height: 60px; animation-delay: 4s; animation-duration: 25s; }
+        .orchid:nth-child(3) { left: 30%; width: 30px; height: 30px; animation-delay: 8s; animation-duration: 18s; }
+        .orchid:nth-child(4) { left: 60%; width: 50px; height: 50px; animation-delay: 12s; animation-duration: 22s; }
+        .orchid:nth-child(5) { left: 90%; width: 45px; height: 45px; animation-delay: 16s; animation-duration: 20s; }
+        .orchid:nth-child(6) { left: 20%; width: 55px; height: 55px; animation-delay: 2s; animation-duration: 24s; }
+
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+    </style>
+</head>
+<body class="text-gray-800 antialiased selection:bg-iguana-pink-300 selection:text-white">
+
+    <!-- Subtle Orchid Animations -->
+    <div class="orchid-bg">
+        <div class="orchid"></div>
+        <div class="orchid"></div>
+        <div class="orchid"></div>
+        <div class="orchid"></div>
+        <div class="orchid"></div>
+        <div class="orchid"></div>
+    </div>
+
+    <!-- Sticky Navbar -->
+    <header class="fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="glassmorphism shadow-md">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="#" class="block">
+                            <img class="h-16 w-auto object-contain" src="assets/images/logo con texto.png" alt="Donde la Iguana Tomaba Café Logo">
+                        </a>
+                    </div>
+
+                    <!-- Desktop Menu -->
+                    <nav class="hidden md:flex space-x-8">
+                        <a href="#hero" class="text-gray-800 hover:text-iguana-pink-600 px-3 py-2 rounded-md text-sm font-bold uppercase tracking-wider transition-colors duration-200">Inicio</a>
+                        <a href="#reservas" class="text-gray-800 hover:text-iguana-pink-600 px-3 py-2 rounded-md text-sm font-bold uppercase tracking-wider transition-colors duration-200">Reservas</a>
+                        <a href="#domicilios" class="text-gray-800 hover:text-iguana-pink-600 px-3 py-2 rounded-md text-sm font-bold uppercase tracking-wider transition-colors duration-200">Menú & Domicilios</a>
+                        <a href="#comunidad" class="text-gray-800 hover:text-iguana-pink-600 px-3 py-2 rounded-md text-sm font-bold uppercase tracking-wider transition-colors duration-200">Comunidad</a>
+                        <a href="#ubicacion" class="text-gray-800 hover:text-iguana-pink-600 px-3 py-2 rounded-md text-sm font-bold uppercase tracking-wider transition-colors duration-200">Ubicación</a>
+                    </nav>
+
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden flex items-center">
+                        <button type="button" id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:text-iguana-pink-600 hover:bg-iguana-pink-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-iguana-pink-500" aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Abrir menú principal</span>
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white shadow-lg absolute w-full" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#hero" class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-iguana-pink-600 hover:bg-iguana-pink-50">Inicio</a>
+                <a href="#reservas" class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-iguana-pink-600 hover:bg-iguana-pink-50">Reservas</a>
+                <a href="#domicilios" class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-iguana-pink-600 hover:bg-iguana-pink-50">Menú & Domicilios</a>
+                <a href="#comunidad" class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-iguana-pink-600 hover:bg-iguana-pink-50">Comunidad</a>
+                <a href="#ubicacion" class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-iguana-pink-600 hover:bg-iguana-pink-50">Ubicación</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content will go here -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-10">
+            <!-- Background element for depth -->
+            <div class="absolute inset-0 z-0 bg-gradient-to-b from-transparent to-iguana-pink-100 opacity-50"></div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col md:flex-row items-center justify-between gap-12">
+                <!-- Text Content -->
+                <div class="w-full md:w-1/2 text-center md:text-left">
+                    <span class="inline-block py-1 px-3 rounded-full bg-iguana-pink-100 text-iguana-pink-600 font-bold text-sm tracking-widest uppercase mb-4 shadow-sm border border-iguana-pink-200">Gastrobar & Coworking</span>
+                    <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                        Un espacio para <br>
+                        <span class="text-iguana-pink-600">ser libre</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-700 mb-8 max-w-lg mx-auto md:mx-0">
+                        Celebramos la diversidad y el empoderamiento. Disfruta de un ambiente sofisticado, seguro y vibrante en el corazón de Cali.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#reservas" class="bg-iguana-pink-600 hover:bg-iguana-pink-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:-translate-y-1 text-center">
+                            Reserva tu Mesa
+                        </a>
+                        <a href="#domicilios" class="bg-white hover:bg-gray-50 text-iguana-pink-600 border border-iguana-pink-600 font-bold py-3 px-8 rounded-full shadow transition duration-300 transform hover:-translate-y-1 text-center">
+                            Ver Menú
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Image / Building -->
+                <div class="w-full md:w-1/2 relative flex justify-center mt-10 md:mt-0">
+                    <!-- Decorative circle behind image -->
+                    <div class="absolute w-72 h-72 md:w-96 md:h-96 bg-iguana-pink-200 rounded-full blur-3xl opacity-60 z-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+                    <img src="assets/images/698483876_18590855584021085_6637902331866875025_n.png" alt="Edificio Donde la Iguana Tomaba Café" class="relative z-10 w-full max-w-md md:max-w-lg object-contain drop-shadow-2xl animate-[float_6s_ease-in-out_infinite] scale-110">
+                </div>
+            </div>
+        </section>
+
+        <!-- Floor Plan & Reservations Section -->
+        <section id="reservas" class="py-20 bg-white relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 mb-4">Reserva tu Espacio</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Selecciona la mesa ideal en nuestro primer piso y contáctanos por WhatsApp para confirmar tu reserva.
+                    </p>
+                </div>
+
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <!-- Floor Plan HTML/CSS Visual -->
+                    <div class="w-full lg:w-3/5 bg-gray-50 rounded-3xl p-8 border border-gray-200 shadow-inner relative overflow-hidden">
+                        <div class="absolute top-4 left-4 text-gray-400 font-bold uppercase tracking-widest text-sm">Piso 1</div>
+
+                        <div class="relative w-full max-w-2xl mx-auto aspect-[4/3] bg-white border-2 border-gray-300 rounded-lg p-6 shadow-sm">
+                            <!-- Entrance -->
+                            <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-2 bg-gray-300 rounded-t-lg"></div>
+                            <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-xs text-gray-500 uppercase tracking-widest">Entrada</div>
+
+                            <!-- Bar Area -->
+                            <div class="absolute top-6 right-6 w-1/3 h-16 bg-iguana-pink-100 border-2 border-iguana-pink-300 rounded-lg flex items-center justify-center">
+                                <span class="font-serif font-bold text-iguana-pink-700">Barra</span>
+                            </div>
+
+                            <!-- Tables -->
+                            <div class="grid grid-cols-3 gap-6 h-full pt-20 pb-12 px-4 relative z-10">
+                                <!-- Table 1 -->
+                                <button onclick="selectMesa(1)" class="mesa-btn group relative flex flex-col items-center justify-center w-20 h-20 bg-white border-2 border-iguana-pink-500 rounded-full mx-auto hover:bg-iguana-pink-50 transition-colors focus:outline-none focus:ring-4 focus:ring-iguana-pink-200" data-mesa="1">
+                                    <span class="font-bold text-lg text-gray-800 group-hover:text-iguana-pink-600">M1</span>
+                                    <div class="absolute -inset-2 border border-gray-200 rounded-full z-[-1]"></div>
+                                    <div class="absolute -left-3 top-1/2 transform -translate-y-1/2 w-2 h-8 bg-gray-300 rounded-full"></div>
+                                    <div class="absolute -right-3 top-1/2 transform -translate-y-1/2 w-2 h-8 bg-gray-300 rounded-full"></div>
+                                </button>
+
+                                <!-- Table 2 -->
+                                <button onclick="selectMesa(2)" class="mesa-btn group relative flex flex-col items-center justify-center w-20 h-20 bg-white border-2 border-iguana-pink-500 rounded-full mx-auto hover:bg-iguana-pink-50 transition-colors focus:outline-none focus:ring-4 focus:ring-iguana-pink-200" data-mesa="2">
+                                    <span class="font-bold text-lg text-gray-800 group-hover:text-iguana-pink-600">M2</span>
+                                    <div class="absolute -inset-2 border border-gray-200 rounded-full z-[-1]"></div>
+                                    <div class="absolute -left-3 top-1/2 transform -translate-y-1/2 w-2 h-8 bg-gray-300 rounded-full"></div>
+                                    <div class="absolute -right-3 top-1/2 transform -translate-y-1/2 w-2 h-8 bg-gray-300 rounded-full"></div>
+                                </button>
+
+                                <!-- Table 3 -->
+                                <button onclick="selectMesa(3)" class="mesa-btn group relative flex flex-col items-center justify-center w-20 h-20 bg-white border-2 border-iguana-pink-500 rounded-full mx-auto hover:bg-iguana-pink-50 transition-colors focus:outline-none focus:ring-4 focus:ring-iguana-pink-200" data-mesa="3">
+                                    <span class="font-bold text-lg text-gray-800 group-hover:text-iguana-pink-600">M3</span>
+                                    <div class="absolute -inset-2 border border-gray-200 rounded-full z-[-1]"></div>
+                                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 w-8 h-2 bg-gray-300 rounded-full"></div>
+                                    <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-8 h-2 bg-gray-300 rounded-full"></div>
+                                    <div class="absolute -left-3 top-1/2 transform -translate-y-1/2 w-2 h-8 bg-gray-300 rounded-full"></div>
+                                    <div class="absolute -right-3 top-1/2 transform -translate-y-1/2 w-2 h-8 bg-gray-300 rounded-full"></div>
+                                </button>
+
+                                <!-- Table 4 -->
+                                <button onclick="selectMesa(4)" class="mesa-btn group relative flex flex-col items-center justify-center w-24 h-16 bg-white border-2 border-iguana-pink-500 rounded-lg mx-auto hover:bg-iguana-pink-50 transition-colors focus:outline-none focus:ring-4 focus:ring-iguana-pink-200 col-span-2 mt-4" data-mesa="4">
+                                    <span class="font-bold text-lg text-gray-800 group-hover:text-iguana-pink-600">M4 (VIP)</span>
+                                    <div class="absolute -top-3 left-1/4 w-6 h-2 bg-gray-300 rounded-full"></div>
+                                    <div class="absolute -top-3 right-1/4 w-6 h-2 bg-gray-300 rounded-full"></div>
+                                    <div class="absolute -bottom-3 left-1/4 w-6 h-2 bg-gray-300 rounded-full"></div>
+                                    <div class="absolute -bottom-3 right-1/4 w-6 h-2 bg-gray-300 rounded-full"></div>
+                                </button>
+
+                                <!-- Table 5 -->
+                                <button onclick="selectMesa(5)" class="mesa-btn group relative flex flex-col items-center justify-center w-20 h-20 bg-white border-2 border-iguana-pink-500 rounded-full mx-auto hover:bg-iguana-pink-50 transition-colors focus:outline-none focus:ring-4 focus:ring-iguana-pink-200 mt-4" data-mesa="5">
+                                    <span class="font-bold text-lg text-gray-800 group-hover:text-iguana-pink-600">M5</span>
+                                    <div class="absolute -inset-2 border border-gray-200 rounded-full z-[-1]"></div>
+                                    <div class="absolute -left-3 top-1/2 transform -translate-y-1/2 w-2 h-8 bg-gray-300 rounded-full"></div>
+                                    <div class="absolute -right-3 top-1/2 transform -translate-y-1/2 w-2 h-8 bg-gray-300 rounded-full"></div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reservation Action Panel -->
+                    <div class="w-full lg:w-2/5 flex flex-col gap-6">
+                        <div class="bg-iguana-pink-50 p-8 rounded-3xl border border-iguana-pink-200 shadow-sm">
+                            <h3 class="font-serif text-2xl font-bold text-gray-900 mb-2">Detalles de la Reserva</h3>
+                            <p class="text-gray-600 mb-6 text-sm">Haz clic en una mesa del plano para seleccionarla.</p>
+
+                            <div class="mb-6 bg-white p-4 rounded-xl border border-gray-200 flex items-center justify-between">
+                                <span class="font-bold text-gray-700">Mesa seleccionada:</span>
+                                <span id="mesa-display" class="text-xl font-serif font-bold text-iguana-pink-600 bg-iguana-pink-100 px-4 py-1 rounded-full">Ninguna</span>
+                            </div>
+
+                            <button id="btn-reservar" onclick="enviarReserva()" class="w-full bg-[#25D366] hover:bg-[#1ebd5c] text-white font-bold py-4 px-6 rounded-xl shadow-md transition duration-300 flex items-center justify-center gap-3 opacity-50 cursor-not-allowed" disabled>
+                                <i class="fab fa-whatsapp text-2xl"></i>
+                                <span>Solicitar Reserva por WhatsApp</span>
+                            </button>
+                            <p class="text-xs text-center text-gray-500 mt-4">Serás redirigido a WhatsApp para confirmar fecha y hora.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menú & Domicilios Section -->
+        <section id="domicilios" class="py-20 bg-iguana-pink-50 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="inline-block py-1 px-3 rounded-full bg-white text-iguana-pink-600 font-bold text-sm tracking-widest uppercase mb-4 shadow-sm border border-iguana-pink-200">Delivery Propio</span>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 mb-4">Nuestro Menú</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Disfruta de nuestros platillos y bebidas en casa. Pide directamente por WhatsApp, sin intermediarios.
+                    </p>
+                </div>
+
+                <!-- Menu Categories / Items -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- Item 1 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition duration-300 flex flex-col">
+                        <div class="h-48 bg-iguana-pink-200 flex items-center justify-center">
+                            <i class="fas fa-hamburger text-6xl text-iguana-pink-400"></i>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-xl font-bold text-gray-900 font-serif">Hamburguesa Empoderada</h3>
+                                    <span class="font-bold text-iguana-pink-600">$25.000</span>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-4">Pan artesanal rosa, carne 150g, queso cheddar, cebolla caramelizada y salsa de la casa.</p>
+                            </div>
+                            <button onclick="pedirDomicilio('Hamburguesa Empoderada')" class="w-full bg-white hover:bg-iguana-pink-50 text-iguana-pink-600 border border-iguana-pink-600 font-bold py-2 px-4 rounded-xl transition duration-300 flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp"></i> Pedir
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition duration-300 flex flex-col">
+                        <div class="h-48 bg-iguana-pink-200 flex items-center justify-center">
+                            <i class="fas fa-cocktail text-6xl text-iguana-pink-400"></i>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-xl font-bold text-gray-900 font-serif">Cóctel Libertad</h3>
+                                    <span class="font-bold text-iguana-pink-600">$18.000</span>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-4">Refrescante mezcla de ginebra, frutos rojos, limón y un toque de magia.</p>
+                            </div>
+                            <button onclick="pedirDomicilio('Cóctel Libertad')" class="w-full bg-white hover:bg-iguana-pink-50 text-iguana-pink-600 border border-iguana-pink-600 font-bold py-2 px-4 rounded-xl transition duration-300 flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp"></i> Pedir
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition duration-300 flex flex-col">
+                        <div class="h-48 bg-iguana-pink-200 flex items-center justify-center">
+                            <i class="fas fa-pizza-slice text-6xl text-iguana-pink-400"></i>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-xl font-bold text-gray-900 font-serif">Pizza Sororidad</h3>
+                                    <span class="font-bold text-iguana-pink-600">$32.000</span>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-4">Masa madre, salsa pomodoro, mozzarella, albahaca fresca y tomates cherry.</p>
+                            </div>
+                            <button onclick="pedirDomicilio('Pizza Sororidad')" class="w-full bg-white hover:bg-iguana-pink-50 text-iguana-pink-600 border border-iguana-pink-600 font-bold py-2 px-4 rounded-xl transition duration-300 flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp"></i> Pedir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Future Integrations Placeholders -->
+                <div class="mt-16 pt-12 border-t border-iguana-pink-200">
+                    <h3 class="text-center font-serif text-2xl font-bold text-gray-800 mb-8">Próximamente</h3>
+                    <div class="flex flex-col md:flex-row gap-6 justify-center">
+                        <!-- Payment Gateway Placeholder -->
+                        <div class="bg-white p-6 rounded-2xl border border-dashed border-gray-300 flex items-center gap-4 opacity-70 w-full md:w-1/3">
+                            <div class="bg-gray-100 p-3 rounded-full text-gray-500">
+                                <i class="fas fa-credit-card text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-700">Pagos en Línea</h4>
+                                <p class="text-xs text-gray-500">Módulo de pasarela de pago (En desarrollo)</p>
+                            </div>
+                        </div>
+
+                        <!-- Live Tracking Placeholder -->
+                        <div class="bg-white p-6 rounded-2xl border border-dashed border-gray-300 flex items-center gap-4 opacity-70 w-full md:w-1/3">
+                            <div class="bg-gray-100 p-3 rounded-full text-gray-500">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-700">Tracking en Vivo</h4>
+                                <p class="text-xs text-gray-500">Seguimiento de tu domiciliario (En desarrollo)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comunidad (Instagram) Section -->
+        <section id="comunidad" class="py-20 bg-white relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 mb-4">Nuestra Comunidad</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
+                        Síguenos en <a href="https://www.instagram.com/dondelaiguanatomabacafe/" target="_blank" class="text-iguana-pink-600 font-bold hover:underline">@dondelaiguanatomabacafe</a> y sé parte de nuestra historia.
+                    </p>
+                </div>
+
+                <!-- Elfsight Instagram Widget -->
+                <div class="w-full bg-gray-50 rounded-2xl p-4 md:p-8 shadow-inner border border-gray-100 overflow-hidden">
+                    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                    <div class="elfsight-app-eb3bfabf-1dd4-4603-ad81-e2c7a4d57cba" data-elfsight-app-lazy></div>
+                    <p class="text-center text-xs text-gray-400 mt-4">*Nota: En producción, asegura reemplazar el ID del widget de Elfsight con el vinculado a la cuenta oficial si es necesario.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ubicación & Footer -->
+        <footer id="ubicacion" class="bg-gray-900 text-white pt-20 pb-10 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
+                    <!-- Brand & Info -->
+                    <div>
+                        <img src="assets/images/solo iguana.png" alt="Iguana Icon" class="h-16 w-auto mb-6 opacity-90 brightness-0 invert">
+                        <h3 class="font-serif text-2xl font-bold text-iguana-pink-400 mb-4">Donde la Iguana Tomaba Café</h3>
+                        <p class="text-gray-400 mb-6">Un espacio seguro, sofisticado y vibrante que celebra la diversidad y el empoderamiento femenino en Cali.</p>
+
+                        <div class="space-y-3 text-gray-300">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-clock text-iguana-pink-500 mt-1"></i>
+                                <div>
+                                    <p class="font-bold text-white">Horario de Atención:</p>
+                                    <p>Todos los días: 1:00 PM - 2:00 AM</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fab fa-whatsapp text-iguana-pink-500"></i>
+                                <p>+57 305 386 2774</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="lg:col-span-2">
+                        <h3 class="font-serif text-2xl font-bold text-iguana-pink-400 mb-6">Encuéntranos</h3>
+                        <div class="w-full h-80 rounded-2xl overflow-hidden shadow-lg border border-gray-700 bg-gray-800">
+                            <!-- Google Maps Embed -->
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.7214589947543!2d-76.5414578!3d3.4416172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a759ada8873b%3A0xcf87f530476ca2b2!2sDonde%20la%20iguana%20tomaba%20caf%C3%A9!5e0!3m2!1sen!2sco!4v1719696000000!5m2!1sen!2sco"
+                                width="100%"
+                                height="100%"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <div class="mt-4 text-right">
+                            <a href="https://www.google.com/maps/place/Donde+la+iguana+tomaba+caf%C3%A9/data=!4m2!3m1!1s0x8e30a759ada8873b:0xcf87f530476ca2b2?sa=X&ved=1t:242&ictx=111" target="_blank" class="inline-flex items-center gap-2 text-iguana-pink-400 hover:text-iguana-pink-300 font-bold text-sm transition-colors">
+                                Abrir en Google Maps <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-500 text-sm">
+                        &copy; <script>document.write(new Date().getFullYear())</script> Donde la Iguana Tomaba Café. Todos los derechos reservados.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/dondelaiguanatomabacafe/" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-iguana-pink-600 hover:text-white transition-all duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://wa.me/573053862774" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-[#25D366] hover:text-white transition-all duration-300">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Background Decoration Footer -->
+            <div class="absolute bottom-0 left-0 w-full overflow-hidden opacity-5 pointer-events-none z-0 flex justify-center">
+                <img src="assets/images/solo texto.png" alt="" class="w-full max-w-4xl object-contain filter invert transform translate-y-1/4">
+            </div>
+        </footer>
+    </main>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Sticky Navbar Effect on Scroll (optional enhancement)
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar').firstElementChild;
+            if (window.scrollY > 10) {
+                navbar.classList.add('bg-white/90');
+                navbar.classList.remove('glassmorphism');
+            } else {
+                navbar.classList.remove('bg-white/90');
+                navbar.classList.add('glassmorphism');
+            }
+        });
+
+        // Reservas - Floor Plan Logic
+        let mesaSeleccionada = null;
+
+        function selectMesa(id) {
+            mesaSeleccionada = id;
+
+            // Update UI
+            document.getElementById('mesa-display').innerText = `Mesa ${id}`;
+            document.getElementById('mesa-display').classList.remove('bg-iguana-pink-100', 'text-iguana-pink-600');
+            document.getElementById('mesa-display').classList.add('bg-iguana-pink-600', 'text-white');
+
+            // Enable button
+            const btn = document.getElementById('btn-reservar');
+            btn.disabled = false;
+            btn.classList.remove('opacity-50', 'cursor-not-allowed');
+
+            // Reset visual state of all tables
+            document.querySelectorAll('.mesa-btn').forEach(el => {
+                el.classList.remove('bg-iguana-pink-200', 'border-iguana-pink-600', 'ring-4', 'ring-iguana-pink-200');
+                el.classList.add('bg-white');
+            });
+
+            // Highlight selected table
+            const selectedEl = document.querySelector(`.mesa-btn[data-mesa="${id}"]`);
+            if(selectedEl) {
+                selectedEl.classList.remove('bg-white');
+                selectedEl.classList.add('bg-iguana-pink-200', 'border-iguana-pink-600', 'ring-4', 'ring-iguana-pink-200');
+            }
+        }
+
+        function enviarReserva() {
+            if(!mesaSeleccionada) return;
+            const numeroWhatsApp = "573053862774"; // The provided number
+            const mensaje = `¡Hola! Me gustaría solicitar una reserva en Donde la Iguana Tomaba Café. Me interesa la *Mesa ${mesaSeleccionada}* del Piso 1. ¿Podrían confirmarme disponibilidad?`;
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+
+        // Pedidos a Domicilio Logic
+        function pedirDomicilio(producto) {
+            const numeroWhatsApp = "573053862774";
+            const mensaje = `¡Hola! Me gustaría pedir un(a) *${producto}* para domicilio. ¿Me podrían ayudar con el proceso?`;
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+</html>
