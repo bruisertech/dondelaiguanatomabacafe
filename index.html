@@ -54,13 +54,13 @@
 
         /* Subtle Orchid Background Animations */
         .orchid-bg {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             pointer-events: none;
-            z-index: -1;
+            z-index: 5;
             overflow: hidden;
         }
 
@@ -69,26 +69,28 @@
             background-size: contain;
             background-repeat: no-repeat;
             opacity: 0;
-            animation: float 15s infinite ease-in-out;
-            border-radius: 50%;
-            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.1);
+            animation: float 25s infinite ease-in-out;
+            bottom: -150px;
         }
 
         @keyframes float {
-            0% { transform: translateY(110vh) rotate(0deg) scale(0.8); opacity: 0; }
-            10% { opacity: 0.6; }
-            90% { opacity: 0.6; }
-            100% { transform: translateY(-30vh) rotate(180deg) scale(1.2); opacity: 0; }
+            0% { transform: translateY(0) rotate(0deg) scale(0.8); opacity: 0; }
+            10% { opacity: 0.7; }
+            50% { transform: translateY(-40vh) rotate(45deg) scale(1.1); opacity: 0.8; }
+            90% { opacity: 0.7; }
+            100% { transform: translateY(-80vh) rotate(90deg) scale(0.9); opacity: 0; }
         }
 
-        .orchid:nth-child(1) { background-image: url('assets/images/1.png'); left: 5%; width: 60px; height: 60px; animation-delay: 0s; }
-        .orchid:nth-child(2) { background-image: url('assets/images/2.png'); left: 85%; width: 80px; height: 80px; animation-delay: 3s; animation-duration: 22s; }
-        .orchid:nth-child(3) { background-image: url('assets/images/3.png'); left: 25%; width: 50px; height: 50px; animation-delay: 7s; animation-duration: 16s; }
-        .orchid:nth-child(4) { background-image: url('assets/images/4.png'); left: 65%; width: 70px; height: 70px; animation-delay: 11s; animation-duration: 20s; }
-        .orchid:nth-child(5) { background-image: url('assets/images/5.png'); left: 45%; width: 90px; height: 90px; animation-delay: 14s; animation-duration: 18s; }
-        .orchid:nth-child(6) { background-image: url('assets/images/6.png'); left: 15%; width: 55px; height: 55px; animation-delay: 2s; animation-duration: 24s; }
-        .orchid:nth-child(7) { background-image: url('assets/images/9.png'); left: 75%; width: 65px; height: 65px; animation-delay: 5s; animation-duration: 19s; }
-        .orchid:nth-child(8) { background-image: url('assets/images/10.png'); left: 35%; width: 75px; height: 75px; animation-delay: 9s; animation-duration: 21s; }
+        .orchid:nth-child(1) { background-image: url('assets/images/1.png'); left: 5%; width: 150px; height: 150px; animation-delay: 0s; animation-duration: 25s; }
+        .orchid:nth-child(2) { background-image: url('assets/images/2.png'); left: 85%; width: 200px; height: 200px; animation-delay: 4s; animation-duration: 30s; }
+        .orchid:nth-child(3) { background-image: url('assets/images/3.png'); left: 25%; width: 120px; height: 120px; animation-delay: 7s; animation-duration: 22s; }
+        .orchid:nth-child(4) { background-image: url('assets/images/4.png'); left: 65%; width: 180px; height: 180px; animation-delay: 11s; animation-duration: 28s; }
+        .orchid:nth-child(5) { background-image: url('assets/images/5.png'); left: 45%; width: 250px; height: 250px; animation-delay: 2s; animation-duration: 35s; }
+        .orchid:nth-child(6) { background-image: url('assets/images/6.png'); left: 15%; width: 140px; height: 140px; animation-delay: 5s; animation-duration: 24s; }
+        .orchid:nth-child(7) { background-image: url('assets/images/7.png'); left: 75%; width: 160px; height: 160px; animation-delay: 9s; animation-duration: 26s; }
+        .orchid:nth-child(8) { background-image: url('assets/images/8.png'); left: 35%; width: 190px; height: 190px; animation-delay: 1s; animation-duration: 32s; }
+        .orchid:nth-child(9) { background-image: url('assets/images/9.png'); left: 55%; width: 130px; height: 130px; animation-delay: 6s; animation-duration: 20s; }
+        .orchid:nth-child(10) { background-image: url('assets/images/10.png'); left: 90%; width: 220px; height: 220px; animation-delay: 10s; animation-duration: 38s; }
 
         .glassmorphism {
             background: rgba(255, 255, 255, 0.7);
@@ -101,17 +103,6 @@
 </head>
 <body class="text-gray-800 antialiased selection:bg-iguana-pink-300 selection:text-white">
 
-    <!-- Dynamic Feminine Decorative Elements -->
-    <div class="orchid-bg">
-        <div class="orchid"></div>
-        <div class="orchid"></div>
-        <div class="orchid"></div>
-        <div class="orchid"></div>
-        <div class="orchid"></div>
-        <div class="orchid"></div>
-        <div class="orchid"></div>
-        <div class="orchid"></div>
-    </div>
 
     <!-- Sticky Navbar -->
     <header class="fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
@@ -161,6 +152,19 @@
     <main class="pt-20">
         <!-- Hero Section Redesign -->
         <section id="hero" class="relative min-h-screen flex items-end justify-center overflow-hidden bg-iguana-pink-50">
+            <!-- Animated Orchids in Hero -->
+            <div class="orchid-bg">
+                <div class="orchid"></div>
+                <div class="orchid"></div>
+                <div class="orchid"></div>
+                <div class="orchid"></div>
+                <div class="orchid"></div>
+                <div class="orchid"></div>
+                <div class="orchid"></div>
+                <div class="orchid"></div>
+                <div class="orchid"></div>
+                <div class="orchid"></div>
+            </div>
             <!-- Background Decor -->
             <div class="absolute inset-0 z-0 bg-gradient-to-b from-transparent to-iguana-pink-100 opacity-80 pointer-events-none"></div>
 
@@ -187,11 +191,11 @@
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                         <a href="#reservas" class="relative overflow-hidden bg-white text-iguana-pink-600 font-bold py-4 px-8 rounded-xl shadow-lg transition duration-300 transform hover:-translate-y-1 text-center group border-2 border-iguana-pink-300">
-                            <img src="assets/images/7.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity z-0" aria-hidden="true">
+                            <img src="assets/images/7.png" alt="" class="absolute inset-0 w-full h-full object-cover scale-150 opacity-20 group-hover:opacity-40 transition-all duration-500 z-0" aria-hidden="true">
                             <span class="relative z-10">Reserva tu Mesa</span>
                         </a>
                         <a href="#domicilios" class="relative overflow-hidden bg-white text-iguana-pink-600 font-bold py-4 px-8 rounded-xl shadow-lg transition duration-300 transform hover:-translate-y-1 text-center group border-2 border-iguana-pink-300">
-                            <img src="assets/images/8.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity z-0" aria-hidden="true">
+                            <img src="assets/images/8.png" alt="" class="absolute inset-0 w-full h-full object-cover scale-150 opacity-20 group-hover:opacity-40 transition-all duration-500 z-0" aria-hidden="true">
                             <span class="relative z-10">Ver Menú</span>
                         </a>
                     </div>
@@ -247,10 +251,10 @@
                                 </div>
 
                                 <!-- Tables -->
-                                <div class="grid grid-cols-3 gap-6 h-full pt-20 pb-12 px-4 relative z-10">
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 h-full pt-28 pb-12 px-2 sm:px-4 relative z-10">
                                     <!-- Table 1 -->
                                     <button onclick="selectMesa(1)" class="mesa-btn group relative flex flex-col items-center justify-center w-20 h-20 bg-white border-2 border-iguana-pink-500 rounded-full mx-auto hover:bg-iguana-pink-50 transition-colors focus:outline-none focus:ring-4 focus:ring-iguana-pink-200 overflow-hidden" data-mesa="1">
-                                        <img src="assets/images/7.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-30 transition-opacity z-0" aria-hidden="true">
+                                        <img src="assets/images/7.png" alt="" class="absolute inset-0 w-full h-full object-cover scale-150 opacity-10 group-hover:opacity-30 transition-opacity z-0" aria-hidden="true">
                                         <span class="font-bold text-lg text-gray-800 group-hover:text-iguana-pink-600 relative z-10">M1</span>
                                         <div class="absolute -inset-2 border border-gray-200 rounded-full z-[-1]"></div>
                                         <div class="absolute -left-3 top-1/2 transform -translate-y-1/2 w-2 h-8 bg-gray-300 rounded-full"></div>
@@ -259,7 +263,7 @@
 
                                     <!-- Table 2 -->
                                     <button onclick="selectMesa(2)" class="mesa-btn group relative flex flex-col items-center justify-center w-20 h-20 bg-white border-2 border-iguana-pink-500 rounded-full mx-auto hover:bg-iguana-pink-50 transition-colors focus:outline-none focus:ring-4 focus:ring-iguana-pink-200 overflow-hidden" data-mesa="2">
-                                        <img src="assets/images/8.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-30 transition-opacity z-0" aria-hidden="true">
+                                        <img src="assets/images/8.png" alt="" class="absolute inset-0 w-full h-full object-cover scale-150 opacity-10 group-hover:opacity-30 transition-opacity z-0" aria-hidden="true">
                                         <span class="font-bold text-lg text-gray-800 group-hover:text-iguana-pink-600 relative z-10">M2</span>
                                         <div class="absolute -inset-2 border border-gray-200 rounded-full z-[-1]"></div>
                                         <div class="absolute -left-3 top-1/2 transform -translate-y-1/2 w-2 h-8 bg-gray-300 rounded-full"></div>
@@ -268,7 +272,7 @@
 
                                     <!-- Table 3 -->
                                     <button onclick="selectMesa(3)" class="mesa-btn group relative flex flex-col items-center justify-center w-20 h-20 bg-white border-2 border-iguana-pink-500 rounded-full mx-auto hover:bg-iguana-pink-50 transition-colors focus:outline-none focus:ring-4 focus:ring-iguana-pink-200 overflow-hidden" data-mesa="3">
-                                        <img src="assets/images/9.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-30 transition-opacity z-0" aria-hidden="true">
+                                        <img src="assets/images/9.png" alt="" class="absolute inset-0 w-full h-full object-cover scale-150 opacity-10 group-hover:opacity-30 transition-opacity z-0" aria-hidden="true">
                                         <span class="font-bold text-lg text-gray-800 group-hover:text-iguana-pink-600 relative z-10">M3</span>
                                         <div class="absolute -inset-2 border border-gray-200 rounded-full z-[-1]"></div>
                                         <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 w-8 h-2 bg-gray-300 rounded-full"></div>
@@ -279,7 +283,7 @@
 
                                     <!-- Table 4 -->
                                     <button onclick="selectMesa(4)" class="mesa-btn group relative flex flex-col items-center justify-center w-24 h-16 bg-white border-2 border-iguana-pink-500 rounded-lg mx-auto hover:bg-iguana-pink-50 transition-colors focus:outline-none focus:ring-4 focus:ring-iguana-pink-200 col-span-2 mt-4 overflow-hidden" data-mesa="4">
-                                        <img src="assets/images/10.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-30 transition-opacity z-0" aria-hidden="true">
+                                        <img src="assets/images/10.png" alt="" class="absolute inset-0 w-full h-full object-cover scale-150 opacity-10 group-hover:opacity-30 transition-opacity z-0" aria-hidden="true">
                                         <span class="font-bold text-lg text-gray-800 group-hover:text-iguana-pink-600 relative z-10">M4 (VIP)</span>
                                         <div class="absolute -top-3 left-1/4 w-6 h-2 bg-gray-300 rounded-full"></div>
                                         <div class="absolute -top-3 right-1/4 w-6 h-2 bg-gray-300 rounded-full"></div>
@@ -289,7 +293,7 @@
 
                                     <!-- Table 5 -->
                                     <button onclick="selectMesa(5)" class="mesa-btn group relative flex flex-col items-center justify-center w-20 h-20 bg-white border-2 border-iguana-pink-500 rounded-full mx-auto hover:bg-iguana-pink-50 transition-colors focus:outline-none focus:ring-4 focus:ring-iguana-pink-200 mt-4 overflow-hidden" data-mesa="5">
-                                        <img src="assets/images/1.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-30 transition-opacity z-0" aria-hidden="true">
+                                        <img src="assets/images/1.png" alt="" class="absolute inset-0 w-full h-full object-cover scale-150 opacity-10 group-hover:opacity-30 transition-opacity z-0" aria-hidden="true">
                                         <span class="font-bold text-lg text-gray-800 group-hover:text-iguana-pink-600 relative z-10">M5</span>
                                         <div class="absolute -inset-2 border border-gray-200 rounded-full z-[-1]"></div>
                                         <div class="absolute -left-3 top-1/2 transform -translate-y-1/2 w-2 h-8 bg-gray-300 rounded-full"></div>
@@ -301,8 +305,8 @@
                             <!-- PISO 2 Content (Hidden by default) -->
                             <div id="piso-2-layout" class="hidden h-full">
                                 <!-- DJ Booth / Stage -->
-                                <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-1/2 h-16 bg-gray-800 border-2 border-iguana-gold rounded-b-xl flex items-center justify-center overflow-hidden">
-                                    <span class="font-serif font-bold text-iguana-gold tracking-widest relative z-10">DJ BOOTH</span>
+                                <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-1/2 h-16 bg-iguana-pink-100 border-2 border-iguana-pink-300 rounded-b-xl flex items-center justify-center overflow-hidden">
+                                    <span class="font-serif font-bold text-iguana-pink-700 tracking-widest relative z-10 text-center text-sm md:text-base">CABINA DJ / ESCENARIO</span>
                                 </div>
 
                                 <!-- Balcony -->
@@ -311,10 +315,10 @@
                                 </div>
 
                                 <!-- Tables Piso 2 -->
-                                <div class="grid grid-cols-2 gap-8 h-full pt-28 pb-16 px-8 relative z-10">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 h-full pt-28 pb-16 px-4 sm:px-8 relative z-10 overflow-y-auto">
                                     <!-- Table 6 Lounge -->
                                     <button onclick="selectMesa(6)" class="mesa-btn group relative flex flex-col items-center justify-center w-full h-24 bg-white border-2 border-iguana-pink-500 rounded-xl mx-auto hover:bg-iguana-pink-50 transition-colors focus:outline-none focus:ring-4 focus:ring-iguana-pink-200 overflow-hidden" data-mesa="6">
-                                        <img src="assets/images/2.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-30 transition-opacity z-0" aria-hidden="true">
+                                        <img src="assets/images/2.png" alt="" class="absolute inset-0 w-full h-full object-cover scale-150 opacity-10 group-hover:opacity-30 transition-opacity z-0" aria-hidden="true">
                                         <span class="font-bold text-lg text-gray-800 group-hover:text-iguana-pink-600 relative z-10">Lounge 1 (M6)</span>
                                         <div class="absolute -left-4 top-1/2 transform -translate-y-1/2 w-3 h-16 bg-gray-300 rounded-r-full"></div>
                                         <div class="absolute -right-4 top-1/2 transform -translate-y-1/2 w-3 h-16 bg-gray-300 rounded-l-full"></div>
@@ -322,7 +326,7 @@
 
                                     <!-- Table 7 Lounge -->
                                     <button onclick="selectMesa(7)" class="mesa-btn group relative flex flex-col items-center justify-center w-full h-24 bg-white border-2 border-iguana-pink-500 rounded-xl mx-auto hover:bg-iguana-pink-50 transition-colors focus:outline-none focus:ring-4 focus:ring-iguana-pink-200 overflow-hidden" data-mesa="7">
-                                        <img src="assets/images/3.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-30 transition-opacity z-0" aria-hidden="true">
+                                        <img src="assets/images/3.png" alt="" class="absolute inset-0 w-full h-full object-cover scale-150 opacity-10 group-hover:opacity-30 transition-opacity z-0" aria-hidden="true">
                                         <span class="font-bold text-lg text-gray-800 group-hover:text-iguana-pink-600 relative z-10">Lounge 2 (M7)</span>
                                         <div class="absolute -left-4 top-1/2 transform -translate-y-1/2 w-3 h-16 bg-gray-300 rounded-r-full"></div>
                                         <div class="absolute -right-4 top-1/2 transform -translate-y-1/2 w-3 h-16 bg-gray-300 rounded-l-full"></div>
@@ -330,13 +334,13 @@
 
                                     <!-- Table 8 High Table -->
                                     <button onclick="selectMesa(8)" class="mesa-btn group relative flex flex-col items-center justify-center w-16 h-16 bg-white border-2 border-iguana-gold rounded-full mx-auto hover:bg-iguana-pink-50 transition-colors focus:outline-none focus:ring-4 focus:ring-iguana-pink-200 overflow-hidden" data-mesa="8">
-                                        <img src="assets/images/4.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-30 transition-opacity z-0" aria-hidden="true">
+                                        <img src="assets/images/4.png" alt="" class="absolute inset-0 w-full h-full object-cover scale-150 opacity-10 group-hover:opacity-30 transition-opacity z-0" aria-hidden="true">
                                         <span class="font-bold text-sm text-gray-800 group-hover:text-iguana-pink-600 relative z-10">M8</span>
                                     </button>
 
                                     <!-- Table 9 High Table -->
                                     <button onclick="selectMesa(9)" class="mesa-btn group relative flex flex-col items-center justify-center w-16 h-16 bg-white border-2 border-iguana-gold rounded-full mx-auto hover:bg-iguana-pink-50 transition-colors focus:outline-none focus:ring-4 focus:ring-iguana-pink-200 overflow-hidden" data-mesa="9">
-                                        <img src="assets/images/5.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-30 transition-opacity z-0" aria-hidden="true">
+                                        <img src="assets/images/5.png" alt="" class="absolute inset-0 w-full h-full object-cover scale-150 opacity-10 group-hover:opacity-30 transition-opacity z-0" aria-hidden="true">
                                         <span class="font-bold text-sm text-gray-800 group-hover:text-iguana-pink-600 relative z-10">M9</span>
                                     </button>
                                 </div>
@@ -377,7 +381,7 @@
                             </div>
 
                             <button id="btn-reservar" onclick="enviarReserva()" class="w-full relative overflow-hidden bg-white hover:bg-green-50 text-[#25D366] border-2 border-[#25D366] font-bold py-4 px-6 rounded-xl shadow-md transition duration-300 flex items-center justify-center gap-3 opacity-50 cursor-not-allowed group" disabled>
-                                <img src="assets/images/3.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity z-0" aria-hidden="true">
+                                <img src="assets/images/3.png" alt="" class="absolute inset-0 w-full h-full object-cover scale-150 opacity-20 group-hover:opacity-40 transition-opacity z-0" aria-hidden="true">
                                 <i class="fab fa-whatsapp text-2xl relative z-10"></i>
                                 <span class="relative z-10">Confirmar Reserva en WhatsApp</span>
                             </button>
@@ -421,7 +425,7 @@
                                 <p class="text-gray-600 text-sm mb-4">Pan artesanal rosa, carne 150g, queso cheddar, cebolla caramelizada y salsa de la casa.</p>
                             </div>
                             <button onclick="pedirDomicilio('Hamburguesa Empoderada')" class="w-full relative overflow-hidden bg-white text-iguana-pink-600 border-2 border-iguana-pink-300 font-bold py-3 px-4 rounded-xl transition duration-300 flex items-center justify-center gap-2 group hover:-translate-y-1 shadow-sm hover:shadow-md">
-                                <img src="assets/images/4.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity z-0" aria-hidden="true">
+                                <img src="assets/images/4.png" alt="" class="absolute inset-0 w-full h-full object-cover scale-150 opacity-20 group-hover:opacity-40 transition-opacity z-0" aria-hidden="true">
                                 <i class="fab fa-whatsapp relative z-10"></i> <span class="relative z-10">Pedir</span>
                             </button>
                         </div>
@@ -442,7 +446,7 @@
                                 <p class="text-gray-600 text-sm mb-4">Refrescante mezcla de ginebra, frutos rojos, limón y un toque de magia.</p>
                             </div>
                             <button onclick="pedirDomicilio('Cóctel Libertad')" class="w-full relative overflow-hidden bg-white text-iguana-pink-600 border-2 border-iguana-pink-300 font-bold py-3 px-4 rounded-xl transition duration-300 flex items-center justify-center gap-2 group hover:-translate-y-1 shadow-sm hover:shadow-md">
-                                <img src="assets/images/5.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity z-0" aria-hidden="true">
+                                <img src="assets/images/5.png" alt="" class="absolute inset-0 w-full h-full object-cover scale-150 opacity-20 group-hover:opacity-40 transition-opacity z-0" aria-hidden="true">
                                 <i class="fab fa-whatsapp relative z-10"></i> <span class="relative z-10">Pedir</span>
                             </button>
                         </div>
@@ -463,7 +467,7 @@
                                 <p class="text-gray-600 text-sm mb-4">Masa madre, salsa pomodoro, mozzarella, albahaca fresca y tomates cherry.</p>
                             </div>
                             <button onclick="pedirDomicilio('Pizza Sororidad')" class="w-full relative overflow-hidden bg-white text-iguana-pink-600 border-2 border-iguana-pink-300 font-bold py-3 px-4 rounded-xl transition duration-300 flex items-center justify-center gap-2 group hover:-translate-y-1 shadow-sm hover:shadow-md">
-                                <img src="assets/images/6.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity z-0" aria-hidden="true">
+                                <img src="assets/images/6.png" alt="" class="absolute inset-0 w-full h-full object-cover scale-150 opacity-20 group-hover:opacity-40 transition-opacity z-0" aria-hidden="true">
                                 <i class="fab fa-whatsapp relative z-10"></i> <span class="relative z-10">Pedir</span>
                             </button>
                         </div>
