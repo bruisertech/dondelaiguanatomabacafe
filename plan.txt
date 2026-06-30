@@ -1,0 +1,23 @@
+1. Fix Hamburger Image Opacity in `index.html`
+   - Locate the `<div class="absolute inset-0 bg-iguana-pink-50/50 pointer-events-none"></div>` overlay inside the hamburger image container.
+   - Remove or adjust it to restore normal opacity.
+
+2. Create `manualdemarca.html`
+   - Use the same Tailwind CSS styling, fonts (Playfair Display, Lato), and color palette defined in `index.html`.
+   - Brand Message: Focus heavily on female empowerment ("empoderamiento femenino"), LGBTQ+ friendliness, diversity, and a sophisticated vibe.
+   - Content Sections:
+     - **Logo & Typography**: Present the provided images (`solo iguana.png`, `solo texto.png`, `logo con texto.png`). Define brand colors (the "iguana-pink" palette) and fonts (Playfair Display for headings, Lato for body).
+     - **Brand Values**: Female empowerment, safe space, vibrant community, sophistication.
+     - **Business Advice & Evaluation**:
+       - Orientation for the business based on the current context.
+       - Provider/Supplier evaluation criteria.
+       - Production system evaluation criteria.
+   - Keep the tone highly appealing ("re chimba") and professional.
+
+3. Update Header in `index.html`
+   - Add a prominent, short link or button to the "Manual de Marca y Propuesta" in the header navigation menu.
+
+4. Check Pre-commit Instructions
+   - Call `pre_commit_instructions` tool to make sure proper testing, verifications, reviews and reflections are done.
+
+5. Submit changes

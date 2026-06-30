@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Marca & Propuesta Comercial | Donde la Iguana Tomaba Café</title>
+    <meta name="description" content="Manual de Marca y Evaluación Comercial para Gastrobar y Coworking LGBTQ+ friendly en Cali.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'iguana-pink': {
+                            50: '#fdf2f8',
+                            100: '#fce7f3',
+                            200: '#fbcfe8',
+                            300: '#f9a8d4',
+                            400: '#f472b6',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            700: '#be185d',
+                            800: '#9d174d',
+                            900: '#831843',
+                        },
+                        'iguana-gold': '#d4af37',
+                    },
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        logo: ['system-ui', 'sans-serif'] // Placeholder, we explain watermelon sugar in text
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { background-color: #fff0f5; }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .color-swatch { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .color-swatch:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
+
+        /* Custom checkbox style */
+        .checklist-item input[type="checkbox"] {
+            appearance: none;
+            background-color: #fff;
+            margin: 0;
+            font: inherit;
+            color: currentColor;
+            width: 1.5em;
+            height: 1.5em;
+            border: 2px solid #db2777;
+            border-radius: 0.25em;
+            display: grid;
+            place-content: center;
+            cursor: pointer;
+            transition: 0.2s all ease-in-out;
+        }
+        .checklist-item input[type="checkbox"]::before {
+            content: "";
+            width: 0.85em;
+            height: 0.85em;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em white;
+            background-color: white;
+            transform-origin: center;
+            clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+        }
+        .checklist-item input[type="checkbox"]:checked {
+            background-color: #db2777;
+        }
+        .checklist-item input[type="checkbox"]:checked::before {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased selection:bg-iguana-pink-300 selection:text-white">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 transition-all duration-300 glassmorphism shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="block">
+                        <img class="h-14 w-auto object-contain" src="assets/images/logo con texto.png" alt="Logo">
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#identidad" class="text-gray-800 hover:text-iguana-pink-600 px-3 py-2 text-sm font-bold uppercase tracking-wider transition-colors">Identidad</a>
+                    <a href="#tipografia" class="text-gray-800 hover:text-iguana-pink-600 px-3 py-2 text-sm font-bold uppercase tracking-wider transition-colors">Tipografía</a>
+                    <a href="#usos" class="text-gray-800 hover:text-iguana-pink-600 px-3 py-2 text-sm font-bold uppercase tracking-wider transition-colors">Usos</a>
+                    <a href="#propuesta" class="text-gray-800 hover:text-iguana-pink-600 px-3 py-2 text-sm font-bold uppercase tracking-wider transition-colors">Propuesta Comercial</a>
+                    <a href="index.html" class="bg-gray-800 text-white hover:bg-gray-900 px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider transition-all">Volver a la Web</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-20">
+
+        <!-- Hero Title -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+            <h1 class="font-serif text-5xl md:text-6xl font-bold text-gray-900 mb-6 drop-shadow-sm">
+                Manual de Marca & <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-iguana-pink-600 to-iguana-pink-400">Propuesta de Valor</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Un documento estratégico que define la identidad visual "re chimba" y los lineamientos operativos de <strong>Donde la Iguana Tomaba Café</strong>, centrado en el empoderamiento femenino, la diversidad y la sofisticación.
+            </p>
+        </section>
+
+        <!-- Brand Identity Section -->
+        <section id="identidad" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+                <div class="bg-iguana-pink-50 p-8 border-b border-iguana-pink-100">
+                    <h2 class="font-serif text-4xl font-bold text-iguana-pink-700 mb-2">1. Identidad Visual</h2>
+                    <p class="text-gray-600 text-lg">La esencia visual de la marca a través de sus componentes gráficos principales.</p>
+                </div>
+
+                <div class="p-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Logo Principal -->
+                    <div class="flex flex-col items-center justify-center p-8 border-2 border-dashed border-gray-200 rounded-2xl bg-gray-50 hover:bg-white transition-colors group">
+                        <img src="assets/images/logo con texto.png" alt="Logo Principal" class="h-48 object-contain mb-6 group-hover:scale-105 transition-transform">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Logo Principal</h3>
+                        <p class="text-sm text-center text-gray-500">Uso primario. Combina el isotipo de la iguana empoderada con la tipografía característica de la marca.</p>
+                    </div>
+
+                    <!-- Isotipo -->
+                    <div class="flex flex-col items-center justify-center p-8 border-2 border-dashed border-gray-200 rounded-2xl bg-gray-50 hover:bg-white transition-colors group">
+                        <img src="assets/images/solo iguana.png" alt="Isotipo" class="h-40 object-contain mb-6 group-hover:scale-105 transition-transform">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Isotipo (Solo Iguana)</h3>
+                        <p class="text-sm text-center text-gray-500">Uso secundario. Ideal para avatares de redes sociales, iconos, favicons y elementos decorativos sutiles (marcas de agua).</p>
+                    </div>
+
+                    <!-- Logotipo -->
+                    <div class="flex flex-col items-center justify-center p-8 border-2 border-dashed border-gray-200 rounded-2xl bg-gray-50 hover:bg-white transition-colors group">
+                        <img src="assets/images/solo texto.png" alt="Logotipo" class="h-24 object-contain mb-6 group-hover:scale-105 transition-transform">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Logotipo (Solo Texto)</h3>
+                        <p class="text-sm text-center text-gray-500">Uso alternativo. Perfecto para membretes, empaques alargados o cuando el espacio vertical es muy limitado.</p>
+                    </div>
+                </div>
+
+                <!-- Color Palette -->
+                <div class="p-8 border-t border-gray-100">
+                    <h3 class="font-serif text-3xl font-bold text-gray-900 mb-6">Paleta de Colores</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                        <div class="color-swatch rounded-xl overflow-hidden shadow-sm border border-gray-200">
+                            <div class="h-24 bg-[#db2777]"></div>
+                            <div class="p-3 bg-white">
+                                <p class="font-bold text-gray-800">Iguana Pink</p>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest">#DB2777</p>
+                                <p class="text-xs text-gray-400 mt-1">Color Principal</p>
+                            </div>
+                        </div>
+                        <div class="color-swatch rounded-xl overflow-hidden shadow-sm border border-gray-200">
+                            <div class="h-24 bg-[#fdf2f8]"></div>
+                            <div class="p-3 bg-white">
+                                <p class="font-bold text-gray-800">Soft Pink</p>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest">#FDF2F8</p>
+                                <p class="text-xs text-gray-400 mt-1">Fondos</p>
+                            </div>
+                        </div>
+                        <div class="color-swatch rounded-xl overflow-hidden shadow-sm border border-gray-200">
+                            <div class="h-24 bg-[#be185d]"></div>
+                            <div class="p-3 bg-white">
+                                <p class="font-bold text-gray-800">Deep Pink</p>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest">#BE185D</p>
+                                <p class="text-xs text-gray-400 mt-1">Acentos/Hover</p>
+                            </div>
+                        </div>
+                        <div class="color-swatch rounded-xl overflow-hidden shadow-sm border border-gray-200">
+                            <div class="h-24 bg-[#d4af37]"></div>
+                            <div class="p-3 bg-white">
+                                <p class="font-bold text-gray-800">Gold Accent</p>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest">#D4AF37</p>
+                                <p class="text-xs text-gray-400 mt-1">Sofisticación</p>
+                            </div>
+                        </div>
+                        <div class="color-swatch rounded-xl overflow-hidden shadow-sm border border-gray-200">
+                            <div class="h-24 bg-[#111827]"></div>
+                            <div class="p-3 bg-white">
+                                <p class="font-bold text-gray-800">Dark Gray</p>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest">#111827</p>
+                                <p class="text-xs text-gray-400 mt-1">Texto Principal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography Section -->
+        <section id="tipografia" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden flex flex-col md:flex-row">
+                <div class="w-full md:w-1/3 bg-iguana-pink-600 p-10 text-white flex flex-col justify-center">
+                    <h2 class="font-serif text-4xl font-bold mb-4">2. Tipografía</h2>
+                    <p class="text-iguana-pink-100 opacity-90 leading-relaxed">
+                        El sistema tipográfico busca un equilibrio perfecto entre la personalidad vibrante de la marca y la legibilidad necesaria para la experiencia del usuario (UX) en la web y plataformas digitales.
+                    </p>
+                </div>
+                <div class="w-full md:w-2/3 p-10 space-y-8">
+
+                    <!-- Font 1: Logo Font -->
+                    <div class="border-b border-gray-100 pb-6">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="bg-iguana-pink-100 text-iguana-pink-700 text-xs font-bold px-2 py-1 rounded uppercase tracking-widest">Fuente del Logo</span>
+                            <h3 class="text-2xl text-gray-900 font-bold" style="font-family: 'Watermelon Script', cursive, sans-serif;">Watermelon Sugar</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-sm bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <strong>Nota de Diseño UX/UI:</strong> Esta fuente aporta un carácter manuscrito, amigable y sumamente empoderador, siendo la estrella de nuestro logotipo. Sin embargo, <strong>no se utiliza en textos de lectura, botones ni párrafos de la página web</strong>. Su trazo complejo dificulta la legibilidad en tamaños pequeños o pantallas móviles. La reservamos exclusivamente para la identidad de marca (el logo) y piezas gráficas impresas muy puntuales de gran tamaño.
+                        </p>
+                    </div>
+
+                    <!-- Font 2: Playfair Display -->
+                    <div class="border-b border-gray-100 pb-6">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="bg-gray-100 text-gray-700 text-xs font-bold px-2 py-1 rounded uppercase tracking-widest">Títulos (H1, H2, H3)</span>
+                            <h3 class="text-2xl text-gray-900 font-serif font-bold">Playfair Display</h3>
+                        </div>
+                        <p class="text-gray-600 mb-3 text-sm">Aporta la sofisticación, el toque clásico y la elegancia ("re chimba") que caracteriza al gastrobar. Sustituye a la fuente del logo en la estructura web para mantener el profesionalismo.</p>
+                        <p class="font-serif text-2xl text-gray-800">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj</p>
+                    </div>
+
+                    <!-- Font 3: Lato -->
+                    <div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="bg-gray-100 text-gray-700 text-xs font-bold px-2 py-1 rounded uppercase tracking-widest">Cuerpo de Texto (P, Span)</span>
+                            <h3 class="text-2xl text-gray-900 font-sans font-bold">Lato</h3>
+                        </div>
+                        <p class="text-gray-600 mb-3 text-sm">Una tipografía sans-serif moderna, limpia y altamente legible. Garantiza que la información del menú, reservas y ubicaciones sea consumida sin esfuerzo por el usuario.</p>
+                        <p class="font-sans text-lg text-gray-800">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Correct & Incorrect Uses -->
+        <section id="usos" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <h2 class="font-serif text-4xl font-bold text-gray-900 mb-8 text-center">3. Usos Correctos e Incorrectos</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Usos Correctos -->
+                <div class="bg-white rounded-3xl p-8 border-t-8 border-green-500 shadow-lg">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xl">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <h3 class="font-bold text-2xl text-gray-900">Usos Permitidos</h3>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-1/3 bg-gray-50 rounded-lg p-2 border border-gray-200 flex items-center justify-center h-24">
+                                <img src="assets/images/logo con texto.png" class="max-h-full object-contain">
+                            </div>
+                            <div class="w-2/3">
+                                <p class="font-bold text-gray-800">Fondos Claros</p>
+                                <p class="text-sm text-gray-600">El logo debe aplicarse preferiblemente sobre fondos blancos, <code>#fdf2f8</code> o colores pastel muy tenues para garantizar el contraste.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-1/3 bg-iguana-pink-600 rounded-lg p-2 border border-gray-200 flex items-center justify-center h-24">
+                                <img src="assets/images/solo iguana.png" class="max-h-full object-contain brightness-0 invert">
+                            </div>
+                            <div class="w-2/3">
+                                <p class="font-bold text-gray-800">Versión Monocromática (Blanco)</p>
+                                <p class="text-sm text-gray-600">Al usar fondos oscuros o fotográficos, aplicar el logo o isotipo completamente en blanco (silueta).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-1/3 border border-dashed border-gray-400 rounded-lg p-2 flex items-center justify-center h-24 relative">
+                                <div class="absolute inset-2 border border-blue-200 bg-blue-50/30"></div>
+                                <img src="assets/images/solo iguana.png" class="h-12 object-contain relative z-10">
+                            </div>
+                            <div class="w-2/3">
+                                <p class="font-bold text-gray-800">Área de Seguridad</p>
+                                <p class="text-sm text-gray-600">Mantener siempre un espacio de respiración alrededor del logo equivalente al tamaño de la "cabeza" de la iguana.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Usos Incorrectos -->
+                <div class="bg-white rounded-3xl p-8 border-t-8 border-red-500 shadow-lg">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xl">
+                            <i class="fas fa-times"></i>
+                        </div>
+                        <h3 class="font-bold text-2xl text-gray-900">Usos Prohibidos</h3>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 opacity-80">
+                            <div class="w-1/3 bg-gray-50 rounded-lg p-2 border border-gray-200 flex items-center justify-center h-24">
+                                <img src="assets/images/logo con texto.png" class="max-h-full object-contain transform scale-y-150">
+                            </div>
+                            <div class="w-2/3">
+                                <p class="font-bold text-gray-800">No Distorsionar</p>
+                                <p class="text-sm text-gray-600">Jamás estirar, comprimir o aplastar el logo. Siempre redimensionar de forma proporcional.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 opacity-80">
+                            <div class="w-1/3 bg-blue-600 rounded-lg p-2 border border-gray-200 flex items-center justify-center h-24">
+                                <img src="assets/images/logo con texto.png" class="max-h-full object-contain">
+                            </div>
+                            <div class="w-2/3">
+                                <p class="font-bold text-gray-800">Pobre Contraste</p>
+                                <p class="text-sm text-gray-600">No usar el logo a full color sobre fondos saturados oscuros que compitan con el tono rosado.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 opacity-80">
+                            <div class="w-1/3 bg-gray-50 rounded-lg p-2 border border-gray-200 flex items-center justify-center h-24">
+                                <img src="assets/images/logo con texto.png" class="max-h-full object-contain filter hue-rotate-90">
+                            </div>
+                            <div class="w-2/3">
+                                <p class="font-bold text-gray-800">Cambio de Colores</p>
+                                <p class="text-sm text-gray-600">No alterar los colores corporativos. La iguana es empoderada y rosa, no modificar la paleta oficial.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Proposal / Orientation -->
+        <section id="propuesta" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="text-center mb-12">
+                <span class="inline-block py-1 px-3 rounded-full bg-iguana-pink-100 text-iguana-pink-700 font-bold text-sm tracking-widest uppercase mb-4">Análisis Estratégico</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 mb-4">Orientación y Evaluación del Negocio</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Con la visión de establecer www.iguana.cafe como un referente gastrobar en Cali, proponemos sistemas de evaluación robustos y hermosos para mantener el estándar de calidad, diversidad y empoderamiento.
+                </p>
+            </div>
+
+            <!-- Complext Descriptions & Orientations -->
+            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 mb-12 border border-gray-100">
+                <h3 class="font-serif text-3xl font-bold text-gray-900 mb-6 border-b pb-4 border-gray-100"><i class="fas fa-compass text-iguana-pink-500 mr-2"></i> Orientación Comercial "Re Chimba"</h3>
+                <div class="prose prose-lg text-gray-600 max-w-none space-y-6">
+                    <p>
+                        <strong>El Contexto Caleño:</strong> En una ciudad vibrante como Cali, la propuesta de <em>Donde la Iguana Tomaba Café</em> no es solo vender hamburguesas y cócteles; es vender un <strong>estado de ánimo y un refugio</strong>. El enfoque LGBTQ+ friendly y de empoderamiento femenino debe sentirse no solo en el discurso y el logo rosa, sino en la seguridad del espacio, la curaduría musical, y la iluminación.
+                    </p>
+                    <p>
+                        <strong>Modelo Coworking + Gastrobar:</strong> Este modelo híbrido requiere una transición operativa perfecta. Durante el día (Coworking), la música debe ser lofi/indie suave, el Wi-Fi impecable y el café de origen. Al caer la noche (Gastrobar), la iluminación debe bajar (luces cálidas, neones rosados sutiles), la coctelería toma protagonismo y la música eleva los BPMs. Esta dualidad es la fortaleza del negocio.
+                    </p>
+                    <p>
+                        <strong>Gestión de Domicilios In-House:</strong> Hemos configurado la web para que los pedidos vayan directo al WhatsApp (+57 305 386 2774). Evitar intermediarios como Rappi en las primeras etapas permite dos cosas vitales: <strong>1)</strong> Control absoluto sobre la presentación y "unboxing" del producto (empaques rosas con frases de empoderamiento), y <strong>2)</strong> un margen de ganancia un 20-30% mayor.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Checklists -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Supplier Evaluation -->
+                <div class="bg-gradient-to-br from-white to-iguana-pink-50 rounded-3xl shadow-lg p-8 border border-iguana-pink-100">
+                    <div class="flex items-center justify-between mb-8">
+                        <h3 class="font-serif text-2xl font-bold text-gray-900">Evaluación de Proveedores</h3>
+                        <div class="w-12 h-12 rounded-full bg-iguana-pink-200 text-iguana-pink-600 flex items-center justify-center text-xl shadow-sm">
+                            <i class="fas fa-truck-loading"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-6">Para mantener el estándar, los proveedores (desde el panadero artesanal hasta el distribuidor de licores) deben ser evaluados rigurosamente.</p>
+
+                    <div class="space-y-4">
+                        <label class="checklist-item flex items-start gap-4 p-4 rounded-xl bg-white border border-gray-200 hover:border-iguana-pink-400 transition-colors cursor-pointer shadow-sm">
+                            <input type="checkbox" class="mt-1">
+                            <div>
+                                <span class="font-bold text-gray-800 block">Calidad y Frescura Constante</span>
+                                <span class="text-xs text-gray-500">¿El pan artesanal llega suave? ¿Los insumos de coctelería son premium?</span>
+                            </div>
+                        </label>
+                        <label class="checklist-item flex items-start gap-4 p-4 rounded-xl bg-white border border-gray-200 hover:border-iguana-pink-400 transition-colors cursor-pointer shadow-sm">
+                            <input type="checkbox" class="mt-1">
+                            <div>
+                                <span class="font-bold text-gray-800 block">Alineación de Valores (Diversidad/Empoderamiento)</span>
+                                <span class="text-xs text-gray-500">Privilegiar compras a empresas lideradas por mujeres o aliados de la comunidad LGBTQ+.</span>
+                            </div>
+                        </label>
+                        <label class="checklist-item flex items-start gap-4 p-4 rounded-xl bg-white border border-gray-200 hover:border-iguana-pink-400 transition-colors cursor-pointer shadow-sm">
+                            <input type="checkbox" class="mt-1">
+                            <div>
+                                <span class="font-bold text-gray-800 block">Tiempos de Entrega y Flexibilidad</span>
+                                <span class="text-xs text-gray-500">Capacidad de respuesta ante eventos no planificados o picos de ventas los fines de semana.</span>
+                            </div>
+                        </label>
+                        <label class="checklist-item flex items-start gap-4 p-4 rounded-xl bg-white border border-gray-200 hover:border-iguana-pink-400 transition-colors cursor-pointer shadow-sm">
+                            <input type="checkbox" class="mt-1">
+                            <div>
+                                <span class="font-bold text-gray-800 block">Sostenibilidad del Empaque</span>
+                                <span class="text-xs text-gray-500">Uso de materiales biodegradables para domicilios, reduciendo plásticos de un solo uso.</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Production System Evaluation -->
+                <div class="bg-gradient-to-bl from-white to-iguana-pink-50 rounded-3xl shadow-lg p-8 border border-iguana-pink-100">
+                    <div class="flex items-center justify-between mb-8">
+                        <h3 class="font-serif text-2xl font-bold text-gray-900">Evaluación Sistema de Producción</h3>
+                        <div class="w-12 h-12 rounded-full bg-iguana-pink-200 text-iguana-pink-600 flex items-center justify-center text-xl shadow-sm">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-6">Métricas y controles para el área de cocina y barra, garantizando que cada platillo o cóctel sea digno de Instagram ("Instagrammable").</p>
+
+                    <div class="space-y-4">
+                        <label class="checklist-item flex items-start gap-4 p-4 rounded-xl bg-white border border-gray-200 hover:border-iguana-pink-400 transition-colors cursor-pointer shadow-sm">
+                            <input type="checkbox" class="mt-1">
+                            <div>
+                                <span class="font-bold text-gray-800 block">Estandarización de Recetas (Fichas Técnicas)</span>
+                                <span class="text-xs text-gray-500">La "Hamburguesa Empoderada" debe saber exactamente igual un martes que un sábado.</span>
+                            </div>
+                        </label>
+                        <label class="checklist-item flex items-start gap-4 p-4 rounded-xl bg-white border border-gray-200 hover:border-iguana-pink-400 transition-colors cursor-pointer shadow-sm">
+                            <input type="checkbox" class="mt-1">
+                            <div>
+                                <span class="font-bold text-gray-800 block">Tiempos de Despacho (Kitchen Display System)</span>
+                                <span class="text-xs text-gray-500">Monitorear que el tiempo desde la comanda hasta la mesa no supere los 15-20 minutos en cocina.</span>
+                            </div>
+                        </label>
+                        <label class="checklist-item flex items-start gap-4 p-4 rounded-xl bg-white border border-gray-200 hover:border-iguana-pink-400 transition-colors cursor-pointer shadow-sm">
+                            <input type="checkbox" class="mt-1">
+                            <div>
+                                <span class="font-bold text-gray-800 block">Gestión de Mermas y Desperdicios</span>
+                                <span class="text-xs text-gray-500">Control semanal de inventario para asegurar rentabilidad y rotación First-In-First-Out (FIFO).</span>
+                            </div>
+                        </label>
+                        <label class="checklist-item flex items-start gap-4 p-4 rounded-xl bg-white border border-gray-200 hover:border-iguana-pink-400 transition-colors cursor-pointer shadow-sm">
+                            <input type="checkbox" class="mt-1">
+                            <div>
+                                <span class="font-bold text-gray-800 block">Estética del Emplatado / Garnish de Coctelería</span>
+                                <span class="text-xs text-gray-500">Auditoría visual. Todo producto entregado debe verse lujoso y acorde a la paleta de colores de la marca.</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-white py-10 text-center">
+        <img src="assets/images/solo iguana.png" alt="Iguana Icon" class="h-12 w-auto mx-auto mb-4 opacity-50 brightness-0 invert">
+        <p class="text-gray-400 text-sm">Documento Confidencial &copy; <script>document.write(new Date().getFullYear())</script> Donde la Iguana Tomaba Café.</p>
+        <p class="text-iguana-pink-600 font-bold mt-2 text-xs uppercase tracking-widest">Empoderamiento • Diversidad • Sofisticación</p>
+    </footer>
+
+</body>
+</html>
